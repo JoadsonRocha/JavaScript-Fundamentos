@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Dom</title>
+<style>
+    body {
+        background-color: #666666;
+    }
+    div#evento {
+        background-color: white;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        font-size: 15pt;
+    }
+    span {
+       margin-left: 35%;
+    }
+    #sub {
+        background: yellow;
+        width: 50%;
+        height: 20%;
+        margin: auto;
+    }
+
+</style>
+</head>
+<body>
+    <div id="evento" onclick="ciclar()" onmouseout= "out()" onmouseover="cor()">
+        <div id="sub" onclick="ciclar()">
+            Eventos Js
+        </div>
+    </div>
+<script>
+    var tn1 = document.getElementById('evento')
+    var tn2 = document.getElementById('sub')
+    function ciclar (){        
+        tn2.innerHTML = 'Clicou'
+
+    }
+    function out() {
+       
+        tn1.style.background = 'white'
+        tn2.style.background = 'yellow'
+        tn2.innerHTML = 'Eventos Js'
+       
+    }
+    function cor(){
+        tn1.style.background = 'blue'
+        tn2.style.background = 'white'
+    }
+
+</script>
+
+</body>
+</html>
