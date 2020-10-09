@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou extrangeiro</title>
+</head>
+<body>
+    Qual seu País: <input type="text" name="npais" id="dpais"/>
+                   <input type="button" value="Verificar" onclick="nac()"/>
+    <div id="res">
+       
+    </div>
+    <script>
+        function nac(){
+            var n = document.querySelector('input#dpais')
+            var res = document.querySelector('div#res')
+            var p = n.value
+            res.innerHTML = `<p>Seu País de nascimento é: <strong>${p.toUpperCase()}</strong></p>`
+            if (p == 'brasil'){
+                res.innerHTML += `Voçê é <strong>Brasileiro!</strong>`
+            } else {
+                res.innerHTML += `Voçê é <strong>Estrangeiro!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
