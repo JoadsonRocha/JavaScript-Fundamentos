@@ -1,17 +1,18 @@
-function carregar (){
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var data = new Date()
-    var hora = data.getHours()
-    msg.innerHTML = `agora são ${hora} Horas.`
-    if (hora >= 0 && hora < 12){
-        img.src = 'manha.png'  //Bom dia
-        document.body.style.background = '#FFF79E'
-    } else if (hora >= 12 && hora <= 18){
-        img.src = 'tarde.png' // Boa tarde
-        document.body.style.background = '#FFB787'
+function chamar(){
+    var num = document.getElementById('txtn')
+    var tab = document.getElementById('seltab')
+    if(num.value.length == 0){
+        alert('[ERRO] Por favor digite um número:')
     } else {
-        img.src = 'noite.png' //boa NOITE
-        document.body.style.background = '#525556'
+        var r = Number(num.value)
+        var c = 1
+        tab.innerHTML = '' //limpa select
+        while(c <= 10){
+            var item = document.createElement('option')
+            item.text = `${r} X ${c} = ${r*c}`
+            tab.appendChild(item)
+            item.value = `tab${c}`
+            c++
+        }
     }
 }

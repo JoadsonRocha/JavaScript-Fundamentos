@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio JavaScript</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body onload="carregar()">
+<body>
     
     <header> 
-        <h1>Hora do Dia</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
-        <div id="msg">
-            
+        <div id="">
+            <P>Numero: <input type="number" id="txtn"/> <input type="submit" value="Verificar tabuada" id="txts" onclick="chamar()"/></P>
         </div>
-        <div id="foto">
-            <img src="" id="imagem"/> 
+        <div id="res">
+          <select name="tabuada" id="seltab" size="10">
+            <option>Digite um Número acima</option>
+          </select>
         </div>
     </section>
     <footer>
