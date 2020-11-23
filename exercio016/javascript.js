@@ -1,4 +1,3 @@
-
 function contar(){
     var ini = window.document.getElementById('inicio')
     var fim = window.document.getElementById('fim')
