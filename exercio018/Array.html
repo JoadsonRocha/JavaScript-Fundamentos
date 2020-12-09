@@ -13,14 +13,17 @@
     </header>
     <section>
         <div id="">
-            <P>Numero (entre 1 a 100): <input type="number" id="txtadd"/> <input type="submit" value="Add" id="txts" onclick="add()"/></P>
+            <P>Numero (entre 1 a 100): 
+            <input type="number" id="num"/> 
+            <input type="submit" id="add" onclick="adicionar()"/></P>
+            <select name="tabuada" id="flista" size="10">
+                <option>Digite um Número acima</option>
+              </select>
         </div>
-        <div id="res">
-          <select name="tabuada" id="txtlist" size="10">
-            <option>Digite um Número acima</option>
-          </select>
+        <div id="res"></div>
+          
           <div>
-           <br/> <input type="submit" id="txtatu" value="Atualizar"/>
+            <input type="submit" id="txtatu" value="Atualizar"/>
           </div>
         </div>
         

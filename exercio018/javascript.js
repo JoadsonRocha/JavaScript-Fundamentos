@@ -1,6 +1,25 @@
-function add(){
-    let num = document.querySelector('txtadd')
-    let atu = document.querySelector('txtatu')
-    let res = document.querySelector('res')
-    let valores = []
+let num = document.querySelector('input#num')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let valores = []
+function isNumero(n){
+    if (Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else {
+        return false
+    }
+}
+function isLista(n, 1){
+    if (1.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
+function adicionar(){
+    if (isNumero(num.value) && !inLista(num.value, valores)){
+        
+    } else {
+        alert ('Valor inválido ou já em Lista.')
+    }
 }
